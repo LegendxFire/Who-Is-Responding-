@@ -3,8 +3,6 @@
     android:layout_height="match_parent"
     tools:context="com.fireapps.whoisresponding.RespondingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +31,8 @@
             android:layout_alignParentLeft="true"
             android:layout_marginRight="4dp"
             android:textSize="14sp"
-            style="?android:attr/borderlessButtonStyle"/>
+            style="?android:attr/borderlessButtonStyle"
+            />
 
         <Button
             android:layout_width="wrap_content"
@@ -65,8 +64,15 @@
 
     <ListView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/responding_ListView"
         android:layout_above="@+id/ll" />
+
+    <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+        android:id="@+id/progressBarCircularIndeterminate"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@color/primary_red"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
