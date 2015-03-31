@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Who Is Responding?</string>
+    <string name="title_activity_sign_in">Who Is Responding?</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="signinInfo1">To be able to sign in below, your department must have a <b>Who Is Responding?</b> subscription and
+     the person responsible must have added you to the roster.</string>
+
+    <string name="signinInfo2">Ask the person responsible for your password.</string>
+    <string name="title_activity_main_navigation">MainNavigation</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

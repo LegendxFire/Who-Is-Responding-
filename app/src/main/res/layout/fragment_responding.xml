@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fireapps.whoisresponding.RespondingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/shadow"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STATION"
+            android:id="@+id/responding_ButtonStation"
+            android:layout_toLeftOf="@+id/responding_ButtonNone"
+            android:layout_toStartOf="@+id/responding_ButtonNone"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="4dp"
+            android:textSize="14sp"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NR"
+            android:id="@+id/responding_ButtonNone"
+            android:layout_centerHorizontal="true"
+            android:minWidth="64dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="14sp"
+            android:maxWidth="64dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCENE"
+            android:id="@+id/responding_ButtonScene"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/responding_ButtonNone"
+            android:layout_toEndOf="@+id/responding_ButtonNone"
+            android:layout_marginLeft="4dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/responding_ListView"
+        android:layout_above="@+id/ll" />
+
+</RelativeLayout>
