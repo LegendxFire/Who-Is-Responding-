@@ -25,6 +25,8 @@ dependencies {
 
     compile 'com.android.support:support-v4:22.0.0'
 
+    compile 'com.google.android.gms:play-services:7.0.0'
+
     compile 'com.jakewharton:butterknife:6.1.0'
 
     compile 'com.github.navasmdc:MaterialDesign:1.+@aar'
