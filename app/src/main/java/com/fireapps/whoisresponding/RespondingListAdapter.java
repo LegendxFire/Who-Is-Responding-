@@ -40,7 +40,12 @@ public class RespondingListAdapter extends ArrayAdapter<MemberObject> {
         resTo = (TextView) convertView.findViewById(R.id.res_list_to);
 
         name.setText(memberObject.get("name").toString());
-        title.setText(memberObject.get("position").toString());
+        try {
+            title.setText(memberObject.get("respondingFrom").toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+            title.setText("");
+        }
         resTo.setText(memberObject.get("respondingTo").toString());
 
         return convertView;

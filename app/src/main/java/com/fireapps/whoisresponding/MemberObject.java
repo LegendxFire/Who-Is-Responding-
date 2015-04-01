@@ -50,12 +50,12 @@ public class MemberObject extends ParseUser {
         put("phone", value);
     }
 
-    public String get(){
-        return getString("phone");
+    public String getLocation(){
+        return getString("respondingFrom");
     }
 
-    public void setPhoneNumber(String value){
-        put("phone", value);
+    public void setLocation(String value){
+        put("respondingFrom", value);
     }
 
 }
