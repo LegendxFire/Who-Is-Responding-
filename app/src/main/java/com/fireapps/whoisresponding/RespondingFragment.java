@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -65,6 +66,7 @@ public class RespondingFragment extends Fragment implements AdapterView.OnItemCl
 
     @InjectView(R.id.responding_ListView)ListView listView;
     @InjectView(R.id.progressBarCircularIndeterminate)ProgressBarCircularIndeterminate spinner;
+    @InjectView(R.id.empty_layout)LinearLayout emptyLayout;
 
     TextToSpeech textToSpeech;
     private RespondingListAdapter adapter;
@@ -158,6 +160,7 @@ public class RespondingFragment extends Fragment implements AdapterView.OnItemCl
         adapter = new RespondingListAdapter(getActivity(), new ArrayList<MemberObject>());
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
+        listView.setEmptyView(emptyLayout);
 
         spinner.setVisibility(View.GONE);
 
@@ -271,8 +274,13 @@ public class RespondingFragment extends Fragment implements AdapterView.OnItemCl
     }
 
     public void updateButtons() {
-        ParseUser currentUser = ParseUser.getCurrentUser();
-        String respondingStatus = currentUser.get("respondingTo").toString();
+
+        String respondingStatus = "";
+        try {
+            respondingStatus = currentUser.get("respondingTo").toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         Toast.makeText(getActivity(), respondingStatus, Toast.LENGTH_SHORT).show();
 

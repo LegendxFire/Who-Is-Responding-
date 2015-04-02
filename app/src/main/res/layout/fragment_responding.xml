@@ -75,4 +75,26 @@
         android:background="@color/primary_red"
         android:layout_centerInParent="true"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:id="@+id/empty_layout">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_visibility_off_white_48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No one responding."
+            android:textSize="20sp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
 </RelativeLayout>
