@@ -127,7 +127,7 @@ public class MainNavigation extends ActionBarActivity implements GoogleApiClient
 
     }
 
-    private void displayLocation() {
+    public void displayLocation() {
 
         mLastLocation = LocationServices.FusedLocationApi
                 .getLastLocation(mGoogleApiClient);
@@ -201,7 +201,7 @@ public class MainNavigation extends ActionBarActivity implements GoogleApiClient
 
     @Override
     public void onConnected(Bundle bundle) {
-        displayLocation();
+        //displayLocation();
     }
 
     @Override
